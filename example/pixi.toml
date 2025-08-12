@@ -1,0 +1,22 @@
+[workspace]
+authors = ["ilmcconnell <iain.mcconnell@gmail.com>"]
+channels = ["conda-forge"]
+name = "example"
+platforms = ["osx-64", "win-64", "linux-64", "osx-arm64"]
+version = "0.1.0"
+
+[dependencies]
+python = ">=3.13.5,<3.14"
+numpy = ">=2.3.2,<3"
+notebook = ">=7.4.5,<8"
+jupyterlab = ">=4.4.5,<5"
+
+[tasks]
+start = { depends-on = [{ task = "lab" }], description = "start exploring" }
+
+[tasks.lab]
+description ="Launch Jupyter Lab"
+cmd = "jupyter lab"
+
+[target.win-64.dependencies]
+posix = ">=1.0.0,<2"
