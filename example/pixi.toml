@@ -20,3 +20,9 @@ cmd = "jupyter lab"
 
 [target.win-64.dependencies]
 posix = ">=1.0.0,<2"
+
+[feature.dev.dependencies]
+pre-commit = ">=4.3.0,<5"
+
+[environments]
+dev = ["dev"]
