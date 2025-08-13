@@ -1,0 +1,11 @@
+[workspace]
+authors = ["ilmcconnell <iain.mcconnell@gmail.com>"]
+channels = ["conda-forge"]
+name = "dir-structure"
+platforms = ["osx-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.13.5,<3.14"
